@@ -12,7 +12,6 @@ round(
     then -timestamp
     else
     timestamp
-    end)/count(distinct process_id)
-    ,3) as processing_time
+    end)/count(distinct process_id),3) as processing_time
 from activity 
 group by machine_id;
